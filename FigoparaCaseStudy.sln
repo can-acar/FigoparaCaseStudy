@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FigoparaCaseStudyApi", "FigoparaCaseStudyApi\FigoparaCaseStudyApi.csproj", "{DCA82C37-EED2-4E39-9249-1F20BC67DE43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCA82C37-EED2-4E39-9249-1F20BC67DE43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCA82C37-EED2-4E39-9249-1F20BC67DE43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCA82C37-EED2-4E39-9249-1F20BC67DE43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCA82C37-EED2-4E39-9249-1F20BC67DE43}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
