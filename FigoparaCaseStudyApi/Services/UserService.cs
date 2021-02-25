@@ -10,12 +10,12 @@ namespace FigoparaCaseStudyApi.Services
 {
     public interface IUserService
     {
-        public Task<ServiceResponse> Add(UserAddRequest request);
+        Task<ServiceResponse> Add(UserAddRequest request);
 
-        public Task<ServiceResponse> Delete(UserDeleteRequest request);
-        public Task<ServiceResponse> Get(UserGetRequest request);
-        public Task<ServiceResponse> Update(UserAddRequest request);
-        public Task<ServiceResponse> Search(UserSearchRequest request);
+        Task<ServiceResponse> Delete(UserDeleteRequest request);
+        Task<ServiceResponse> Get(UserGetRequest request);
+        Task<ServiceResponse> Update(UserUpdateRequest request);
+
     }
 
     public class UserService : IUserService
@@ -29,9 +29,11 @@ namespace FigoparaCaseStudyApi.Services
             UserRepository = userRepository;
         }
 
+     
+
         public async Task<ServiceResponse> Add(UserAddRequest request)
         {
-            ServiceResponse Response = new ServiceResponse();
+            ServiceResponse response = new ServiceResponse();
             try
             {
                 var user = new User
@@ -43,54 +45,105 @@ namespace FigoparaCaseStudyApi.Services
                     Surname  = request.Surname
                 };
 
-                var hasUser =await UserRepository.HasUser(what => what.Name == user.Name 
-                                                          || what.Surname == user.Surname 
-                                                          || what.Phone == user.Phone 
-                                                          || what.Email == user.Email);
+                var hasUser = await UserRepository.HasUser(what => what.Name == request.Name || what.Surname == request.Surname || what.Phone == request.Phone || what.Email == request.Email);
 
                 if (hasUser)
                 {
-                    Response.Status  = false;
-                    Response.Data    = user;
-                    Response.Message = $"{user.Name} {user.Surname} kullanıcısı kayıtlı";
+                    response.Status  = false;
+                    response.Data    = request;
+                    response.Message = $"{request.Name} {request.Surname} kullanıcısı kayıtlı";
+
+                    return await Task.FromResult(response);
                 }
 
                 UserRepository.Add(user);
 
-                UserRepository.Save();
+                if (await UserRepository.Save() != -1)
+                {
+                    Logger.LogInformation("@user Kayıt işlemi Yapıldı", user);
+
+                    response.Status = true;
+
+                    response.Data = user;
+
+                    response.Message = "Kayıt işlemi Yapıldı";
+                }
+                else
+                {
+                    Logger.LogError("Kayıt işlemi Yapılamadı", user);
+
+                    response.Status = false;
+
+                    response.Message = "işlem sırasında bir hata alındı.";
+                }
             }
             catch (Exception ex)
             {
-                Response.Status  = false;
-                Response.Message = "işlem sırasında bir hata alındı.";
-                Response.Data = new
-                {
-                    Code = 500,
-                };
+                response.Status  = false;
+                response.Message = "işlem sırasında bir hata alındı.";
+
                 Logger.LogError(ex.Message, ex);
             }
 
-            return await Task.FromResult(Response);
+            return await Task.FromResult(response);
         }
 
-        public Task<ServiceResponse> Delete(UserDeleteRequest request)
+        public async Task<ServiceResponse> Delete(UserDeleteRequest request)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
-        public Task<ServiceResponse> Get(UserGetRequest request)
+        public async Task<ServiceResponse> Get(UserGetRequest request)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
-        public Task<ServiceResponse> Update(UserAddRequest request)
+        public async Task<ServiceResponse> Update(UserUpdateRequest request)
         {
-            throw new System.NotImplementedException();
-        }
+            ServiceResponse response = new ServiceResponse();
+            try
+            {
+                var user = new User
+                {
+                    Id       = request.Id,
+                    Email    = request.Email,
+                    Name     = request.Name,
+                    Password = request.Password,
+                    Phone    = request.Phone,
+                    Surname  = request.Surname
+                };
 
-        public Task<ServiceResponse> Search(UserSearchRequest request)
-        {
-            throw new System.NotImplementedException();
+
+                UserRepository.Add(user);
+
+                if (await UserRepository.Save() != -1)
+                {
+                    Logger.LogInformation("@user Kayıt işlemi Yapıldı", user);
+
+                    response.Status = true;
+
+                    response.Data = user;
+
+                    response.Message = "Kayıt işlemi Yapıldı";
+                }
+                else
+                {
+                    Logger.LogError("Kayıt işlemi Yapılamadı", user);
+
+                    response.Status = false;
+
+                    response.Message = "işlem sırasında bir hata alındı.";
+                }
+            }
+            catch (Exception ex)
+            {
+                response.Status  = false;
+                response.Message = "işlem sırasında bir hata alındı.";
+
+                Logger.LogError(ex.Message, ex);
+            }
+
+            return await Task.FromResult(response);
         }
     }
 }

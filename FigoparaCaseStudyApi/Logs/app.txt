@@ -98,3 +98,1465 @@ Cannot resolve parameter 'FigoparaCaseStudyApi.Entities.Db.UserDbContext dbConte
    at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
 2021-02-24 23:14:59.313 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117 - 500 - text/plain 201.2890ms
+2021-02-25 09:31:33.533 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 09:31:33.584 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 09:31:33.586 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 09:31:33.587 +03:00 [INF] Hosting environment: Development
+2021-02-25 09:31:33.588 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 09:31:34.100 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger - -
+2021-02-25 09:31:34.189 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger - - - 301 0 - 92.1856ms
+2021-02-25 09:31:34.338 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 09:31:34.444 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 105.7906ms
+2021-02-25 09:31:34.513 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2021-02-25 09:31:34.514 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - -
+2021-02-25 09:31:34.515 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - -
+2021-02-25 09:31:34.567 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-02-25 09:31:34.572 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-02-25 09:31:34.583 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-02-25 09:31:34.585 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - - - 200 332952 application/javascript 70.7389ms
+2021-02-25 09:31:34.585 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 200 143212 text/css 71.8837ms
+2021-02-25 09:31:34.586 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - - - 200 1061588 application/javascript 71.0527ms
+2021-02-25 09:31:35.577 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 09:31:35.584 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/favicon-32x32.png - -
+2021-02-25 09:31:35.586 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2021-02-25 09:31:35.589 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/favicon-32x32.png - - - 200 628 image/png 4.8158ms
+2021-02-25 09:31:35.697 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 120.1593ms
+2021-02-25 09:31:47.744 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117
+2021-02-25 09:31:47.783 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 09:31:47.823 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 09:31:47.838 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 6.769ms
+2021-02-25 09:31:47.843 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 09:31:47.847 +03:00 [ERR] HTTP POST /api/v1/User/add responded 500 in 96.2863 ms
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating FigoparaCaseStudyApi.Services.UserService -> FigoparaCaseStudyApi.Repositories.UserRepository.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'FigoparaCaseStudyApi.Repositories.UserRepository' can be invoked with the available services and parameters:
+Cannot resolve parameter 'FigoparaCaseStudyApi.Entities.Db.UserDbContext dbContext' of constructor 'Void .ctor(FigoparaCaseStudyApi.Entities.Db.UserDbContext)'.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.GetAllBindings(ConstructorBinder[] availableConstructors, IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.ActivateInstance(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<ConfigurePipeline>b__11_0(ResolveRequestContext ctxt, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.<>c__DisplayClass5_0.<Execute>b__0()
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid id, Func`1 creator)
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid primaryId, Nullable`1 qualifyingId, Func`1 creator)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.Execute(ResolveRequest request)
+   at Autofac.Core.Lifetime.LifetimeScope.ResolveComponent(ResolveRequest request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.ResolveOptional(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.ResolveOptional(IComponentContext context, Type serviceType)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method325(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2021-02-25 09:31:47.896 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating FigoparaCaseStudyApi.Services.UserService -> FigoparaCaseStudyApi.Repositories.UserRepository.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'FigoparaCaseStudyApi.Repositories.UserRepository' can be invoked with the available services and parameters:
+Cannot resolve parameter 'FigoparaCaseStudyApi.Entities.Db.UserDbContext dbContext' of constructor 'Void .ctor(FigoparaCaseStudyApi.Entities.Db.UserDbContext)'.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.GetAllBindings(ConstructorBinder[] availableConstructors, IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.ActivateInstance(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<ConfigurePipeline>b__11_0(ResolveRequestContext ctxt, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.<>c__DisplayClass5_0.<Execute>b__0()
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid id, Func`1 creator)
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid primaryId, Nullable`1 qualifyingId, Func`1 creator)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.Execute(ResolveRequest request)
+   at Autofac.Core.Lifetime.LifetimeScope.ResolveComponent(ResolveRequest request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.ResolveOptional(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.ResolveOptional(IComponentContext context, Type serviceType)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method325(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-02-25 09:31:47.923 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117 - 500 - text/plain 179.0656ms
+2021-02-25 09:35:35.066 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 09:35:35.114 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 09:35:35.115 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 09:35:35.116 +03:00 [INF] Hosting environment: Development
+2021-02-25 09:35:35.122 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 09:35:35.478 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 09:35:35.634 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 158.3556ms
+2021-02-25 09:35:37.146 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 09:35:37.246 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 99.3114ms
+2021-02-25 09:35:43.060 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117
+2021-02-25 09:35:43.100 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 09:35:43.140 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 09:35:43.453 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-02-25 09:35:43.473 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 324.6634ms
+2021-02-25 09:35:43.479 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 09:35:43.482 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 414.9206 ms
+2021-02-25 09:35:43.486 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117 - 400 - application/json;+charset=utf-8 426.4296ms
+2021-02-25 09:36:20.569 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 81
+2021-02-25 09:36:20.577 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 09:36:20.580 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 09:36:20.599 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-02-25 09:36:20.601 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 17.6505ms
+2021-02-25 09:36:20.606 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 09:36:20.607 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 31.5860 ms
+2021-02-25 09:36:20.609 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 81 - 400 - application/json;+charset=utf-8 40.1269ms
+2021-02-25 09:36:54.341 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 131
+2021-02-25 09:36:54.345 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 09:36:54.348 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 09:36:54.907 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 09:36:55.477 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[@__user_Name_0='?' (Size = 3), @__user_Surname_1='?' (Size = 4), @__user_Phone_2='?' (Size = 9), @__user_Email_3='?' (Size = 24)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__user_Name_0) OR ("u"."Surname" = @__user_Surname_1)) OR ("u"."Phone" = @__user_Phone_2)) OR ("u"."Email" = @__user_Email_3))
+2021-02-25 09:36:55.697 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 24), @p1='?' (Size = 3), @p2='?' (Size = 5), @p3='?' (Size = 9), @p4='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "user" ("Email", "Name", "Password", "Phone", "Surname")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "Id"
+FROM "user"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2021-02-25 09:36:55.751 +03:00 [INF] @user Kayıt işlemi Yapıldı
+2021-02-25 09:36:55.754 +03:00 [INF] Executing OkObjectResult, writing value of type 'FigoparaCaseStudyApi.Response.ServiceResponse'.
+2021-02-25 09:36:55.761 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 1410.6428ms
+2021-02-25 09:36:55.764 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 09:36:55.766 +03:00 [INF] HTTP POST /api/v1/User/add responded 200 in 1420.8511 ms
+2021-02-25 09:36:55.771 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 131 - 200 - application/json;+charset=utf-8 1430.5259ms
+2021-02-25 09:37:52.007 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 09:37:52.053 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 09:37:52.058 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 09:37:52.059 +03:00 [INF] Hosting environment: Development
+2021-02-25 09:37:52.060 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 09:37:52.531 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 09:37:52.719 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 166.8113ms
+2021-02-25 09:37:54.200 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 09:37:54.328 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 127.4322ms
+2021-02-25 09:38:00.215 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 131
+2021-02-25 09:38:00.260 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 09:38:00.299 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 09:38:01.080 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 09:38:01.468 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[@__user_Name_0='?' (Size = 3), @__user_Surname_1='?' (Size = 4), @__user_Phone_2='?' (Size = 9), @__user_Email_3='?' (Size = 24)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__user_Name_0) OR ("u"."Surname" = @__user_Surname_1)) OR ("u"."Phone" = @__user_Phone_2)) OR ("u"."Email" = @__user_Email_3))
+2021-02-25 09:38:01.703 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 24), @p1='?' (Size = 3), @p2='?' (Size = 5), @p3='?' (Size = 9), @p4='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "user" ("Email", "Name", "Password", "Phone", "Surname")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "Id"
+FROM "user"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2021-02-25 09:38:01.761 +03:00 [INF] @user Kayıt işlemi Yapıldı
+2021-02-25 09:38:01.768 +03:00 [INF] Executing OkObjectResult, writing value of type 'FigoparaCaseStudyApi.Response.ServiceResponse'.
+2021-02-25 09:38:01.788 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 1480.5071ms
+2021-02-25 09:38:01.791 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 09:38:01.794 +03:00 [INF] HTTP POST /api/v1/User/add responded 200 in 1572.3764 ms
+2021-02-25 09:38:01.801 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 131 - 200 - application/json;+charset=utf-8 1585.9416ms
+2021-02-25 09:38:15.785 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 131
+2021-02-25 09:38:15.789 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 09:38:15.792 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 09:38:15.829 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 09:38:15.835 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__user_Name_0='?' (Size = 3), @__user_Surname_1='?' (Size = 4), @__user_Phone_2='?' (Size = 9), @__user_Email_3='?' (Size = 24)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__user_Name_0) OR ("u"."Surname" = @__user_Surname_1)) OR ("u"."Phone" = @__user_Phone_2)) OR ("u"."Email" = @__user_Email_3))
+2021-02-25 09:38:15.841 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 24), @p1='?' (Size = 3), @p2='?' (Size = 5), @p3='?' (Size = 9), @p4='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "user" ("Email", "Name", "Password", "Phone", "Surname")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "Id"
+FROM "user"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2021-02-25 09:38:15.851 +03:00 [INF] @user Kayıt işlemi Yapıldı
+2021-02-25 09:38:15.853 +03:00 [INF] Executing OkObjectResult, writing value of type 'FigoparaCaseStudyApi.Response.ServiceResponse'.
+2021-02-25 09:38:15.855 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 59.6584ms
+2021-02-25 09:38:15.859 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 09:38:15.861 +03:00 [INF] HTTP POST /api/v1/User/add responded 200 in 72.6630 ms
+2021-02-25 09:38:15.863 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 131 - 200 - application/json;+charset=utf-8 78.0040ms
+2021-02-25 09:38:26.483 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 09:38:26.583 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 09:38:26.585 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 09:38:26.586 +03:00 [INF] Hosting environment: Development
+2021-02-25 09:38:26.587 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 09:38:27.270 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 09:38:27.583 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 278.4206ms
+2021-02-25 09:38:29.022 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 09:38:29.157 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 135.0007ms
+2021-02-25 09:38:37.010 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 131
+2021-02-25 09:38:37.094 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 09:38:37.161 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 09:38:40.146 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 09:38:40.521 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@__user_Name_0='?' (Size = 3), @__user_Surname_1='?' (Size = 4), @__user_Phone_2='?' (Size = 9), @__user_Email_3='?' (Size = 24)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__user_Name_0) OR ("u"."Surname" = @__user_Surname_1)) OR ("u"."Phone" = @__user_Phone_2)) OR ("u"."Email" = @__user_Email_3))
+2021-02-25 09:44:48.466 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 09:44:48.564 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 09:44:48.566 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 09:44:48.568 +03:00 [INF] Hosting environment: Development
+2021-02-25 09:44:48.569 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 09:44:49.056 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 09:44:49.333 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 272.0687ms
+2021-02-25 09:44:50.296 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 09:44:50.405 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 108.6044ms
+2021-02-25 09:44:57.546 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117
+2021-02-25 09:44:57.618 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 09:44:57.685 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 09:45:15.743 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-02-25 09:45:15.766 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 18074.2532ms
+2021-02-25 09:45:15.772 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 09:45:15.775 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 18223.6862 ms
+2021-02-25 09:45:15.780 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117 - 400 - application/json;+charset=utf-8 18235.4002ms
+2021-02-25 09:45:56.583 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 130
+2021-02-25 09:45:56.586 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 09:45:56.594 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 09:45:59.141 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-02-25 09:45:59.144 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 2545.8187ms
+2021-02-25 09:45:59.146 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 09:45:59.148 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 2562.5832 ms
+2021-02-25 09:45:59.150 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 130 - 400 - application/json;+charset=utf-8 2567.2489ms
+2021-02-25 11:59:44.269 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 11:59:44.366 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 11:59:44.402 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 11:59:44.403 +03:00 [INF] Hosting environment: Development
+2021-02-25 11:59:44.410 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 11:59:44.895 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 11:59:45.200 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 300.7652ms
+2021-02-25 11:59:46.310 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 11:59:46.429 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 118.9153ms
+2021-02-25 11:59:48.996 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 130
+2021-02-25 11:59:49.085 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 11:59:49.154 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 11:59:59.287 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 11:59:59.658 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@__request_Name_0='?' (Size = 3), @__request_Surname_1='?' (Size = 4), @__request_Phone_2='?' (Size = 6), @__request_Email_3='?' (Size = 24)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:00:11.489 +03:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType0`1[[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-02-25 12:00:11.510 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 22349.3563ms
+2021-02-25 12:00:11.516 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:00:11.519 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 22501.2167 ms
+2021-02-25 12:00:11.528 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 130 - 400 - application/json;+charset=utf-8 22533.1720ms
+2021-02-25 12:05:50.668 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 12:05:50.762 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 12:05:50.764 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 12:05:50.765 +03:00 [INF] Hosting environment: Development
+2021-02-25 12:05:50.766 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 12:05:51.231 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 12:05:51.477 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 240.2973ms
+2021-02-25 12:05:51.814 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 12:05:51.923 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 107.7297ms
+2021-02-25 12:05:54.986 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 130
+2021-02-25 12:05:55.055 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:05:55.121 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:06:00.393 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:06:00.756 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[@__request_Name_0='?' (Size = 3), @__request_Surname_1='?' (Size = 4), @__request_Phone_2='?' (Size = 6), @__request_Email_3='?' (Size = 24)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:06:05.738 +03:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType0`1[[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-02-25 12:06:05.758 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 10628.2854ms
+2021-02-25 12:06:05.764 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:06:05.767 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 10774.4416 ms
+2021-02-25 12:06:05.773 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 130 - 400 - application/json;+charset=utf-8 10788.9438ms
+2021-02-25 12:07:17.250 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 12:07:17.403 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 12:07:17.514 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 12:07:17.515 +03:00 [INF] Hosting environment: Development
+2021-02-25 12:07:17.517 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 12:07:17.783 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 12:07:17.783 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 130
+2021-02-25 12:07:17.921 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:07:18.012 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:07:18.037 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 246.6923ms
+2021-02-25 12:07:20.874 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 12:07:21.013 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 138.3448ms
+2021-02-25 12:07:21.297 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:07:21.652 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@__request_Name_0='?' (Size = 3), @__request_Surname_1='?' (Size = 4), @__request_Phone_2='?' (Size = 6), @__request_Email_3='?' (Size = 24)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:07:27.145 +03:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType0`1[[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-02-25 12:07:27.164 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 9138.6196ms
+2021-02-25 12:07:27.168 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:07:27.171 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 9323.9796 ms
+2021-02-25 12:07:27.178 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 130 - 400 - application/json;+charset=utf-8 9401.1541ms
+2021-02-25 12:08:41.283 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 12:08:41.415 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 12:08:41.418 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 12:08:41.419 +03:00 [INF] Hosting environment: Development
+2021-02-25 12:08:41.420 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 12:08:41.679 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 130
+2021-02-25 12:08:41.860 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 12:08:41.954 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:08:42.042 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:08:42.230 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 261.5831ms
+2021-02-25 12:08:44.952 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 12:08:45.088 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 136.9282ms
+2021-02-25 12:08:45.367 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:08:45.713 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@__request_Name_0='?' (Size = 3), @__request_Surname_1='?' (Size = 4), @__request_Phone_2='?' (Size = 6), @__request_Email_3='?' (Size = 24)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:08:48.829 +03:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType0`1[[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-02-25 12:08:48.855 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 6796.8794ms
+2021-02-25 12:08:48.858 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:08:48.862 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 6996.3433 ms
+2021-02-25 12:08:48.868 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 130 - 400 - application/json;+charset=utf-8 7198.8029ms
+2021-02-25 12:10:16.519 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117
+2021-02-25 12:10:16.524 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:10:16.526 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:10:18.361 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:10:18.367 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_Name_0='?' (Size = 6), @__request_Surname_1='?' (Size = 6), @__request_Phone_2='?' (Size = 6), @__request_Email_3='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:10:18.940 +03:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType0`1[[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-02-25 12:10:18.943 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 2413.7792ms
+2021-02-25 12:10:18.945 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:10:18.946 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 2423.0067 ms
+2021-02-25 12:10:18.948 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117 - 400 - application/json;+charset=utf-8 2429.3044ms
+2021-02-25 12:20:05.000 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 12:20:05.252 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 12:20:05.276 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 12:20:05.285 +03:00 [INF] Hosting environment: Development
+2021-02-25 12:20:05.299 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 12:20:05.522 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 12:20:05.795 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 269.7221ms
+2021-02-25 12:20:06.755 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 12:20:06.879 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 123.1988ms
+2021-02-25 12:20:11.432 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 130
+2021-02-25 12:20:11.506 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:20:11.573 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:20:21.172 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:20:21.534 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[@__request_Name_0='?' (Size = 3), @__request_Surname_1='?' (Size = 4), @__request_Phone_2='?' (Size = 6), @__request_Email_3='?' (Size = 24)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:20:25.420 +03:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Newtonsoft.Json.Linq.JObject, Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed]]'.
+2021-02-25 12:20:25.440 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 13859.8363ms
+2021-02-25 12:20:25.444 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:20:25.447 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 14007.0803 ms
+2021-02-25 12:20:25.453 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 130 - 400 - application/json;+charset=utf-8 14022.0445ms
+2021-02-25 12:20:44.453 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 12:20:44.480 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 27.0444ms
+2021-02-25 12:20:45.122 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 12:20:45.136 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 14.2159ms
+2021-02-25 12:20:49.825 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117
+2021-02-25 12:20:49.828 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:20:49.833 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:20:51.172 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:20:51.177 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Name_0='?' (Size = 6), @__request_Surname_1='?' (Size = 6), @__request_Phone_2='?' (Size = 6), @__request_Email_3='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:20:51.851 +03:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Newtonsoft.Json.Linq.JObject, Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed]]'.
+2021-02-25 12:20:51.854 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 2012.0298ms
+2021-02-25 12:20:51.857 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:20:51.859 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 2031.2343 ms
+2021-02-25 12:20:51.861 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117 - 400 - application/json;+charset=utf-8 2036.6000ms
+2021-02-25 12:21:16.636 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 12:21:16.821 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 12:21:16.902 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 12:21:16.967 +03:00 [INF] Hosting environment: Development
+2021-02-25 12:21:16.968 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 12:21:17.173 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 12:21:17.427 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 247.1473ms
+2021-02-25 12:21:18.604 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 12:21:18.727 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 122.8520ms
+2021-02-25 12:21:19.892 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117
+2021-02-25 12:21:19.966 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:21:20.033 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:21:22.278 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:21:22.637 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@__request_Name_0='?' (Size = 6), @__request_Surname_1='?' (Size = 6), @__request_Phone_2='?' (Size = 6), @__request_Email_3='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:21:24.752 +03:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Newtonsoft.Json.Linq.JObject, Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed]]'.
+2021-02-25 12:21:24.772 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 4731.3625ms
+2021-02-25 12:21:24.776 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:21:24.782 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 4882.1723 ms
+2021-02-25 12:21:24.788 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117 - 400 - application/json;+charset=utf-8 4896.7330ms
+2021-02-25 12:21:54.457 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117
+2021-02-25 12:21:54.504 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:21:54.507 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:21:55.973 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:21:55.980 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Name_0='?' (Size = 6), @__request_Surname_1='?' (Size = 6), @__request_Phone_2='?' (Size = 6), @__request_Email_3='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:22:15.061 +03:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Newtonsoft.Json.Linq.JObject, Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed]]'.
+2021-02-25 12:22:15.064 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 20554.2194ms
+2021-02-25 12:22:15.066 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:22:15.067 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 20564.4343 ms
+2021-02-25 12:22:15.069 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117 - 400 - application/json;+charset=utf-8 20613.0656ms
+2021-02-25 12:22:23.615 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 81
+2021-02-25 12:22:23.618 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:22:23.622 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:22:24.951 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:22:24.956 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Name_0='?', @__request_Surname_1='?', @__request_Phone_2='?', @__request_Email_3='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:22:26.214 +03:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Newtonsoft.Json.Linq.JObject, Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed]]'.
+2021-02-25 12:22:26.216 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 2589.9335ms
+2021-02-25 12:22:26.218 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:22:26.220 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 2602.4835 ms
+2021-02-25 12:22:26.223 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 81 - 400 - application/json;+charset=utf-8 2607.9839ms
+2021-02-25 12:22:59.170 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 81
+2021-02-25 12:22:59.172 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:22:59.175 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:23:00.621 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:23:00.627 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Name_0='?', @__request_Surname_1='?', @__request_Phone_2='?', @__request_Email_3='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:24:26.759 +03:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Newtonsoft.Json.Linq.JObject, Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed]]'.
+2021-02-25 12:24:26.761 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 87586.4721ms
+2021-02-25 12:24:26.762 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:24:26.762 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 87593.4240 ms
+2021-02-25 12:24:26.764 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 81 - 400 - application/json;+charset=utf-8 87596.8144ms
+2021-02-25 12:24:30.540 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 81
+2021-02-25 12:24:30.542 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:24:30.545 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:24:32.674 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:24:32.678 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_Name_0='?', @__request_Surname_1='?', @__request_Phone_2='?', @__request_Email_3='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:28:39.446 +03:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Newtonsoft.Json.Linq.JObject, Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed]]'.
+2021-02-25 12:28:39.460 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 248920.6111ms
+2021-02-25 12:28:39.464 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:28:39.466 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 248931.9090 ms
+2021-02-25 12:28:39.468 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 81 - 400 - application/json;+charset=utf-8 248935.8759ms
+2021-02-25 12:28:45.362 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js.map - -
+2021-02-25 12:28:45.362 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js.map - -
+2021-02-25 12:28:45.370 +03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js.map responded 404 in 0.3182 ms
+2021-02-25 12:28:45.371 +03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js.map responded 404 in 0.5459 ms
+2021-02-25 12:28:45.382 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js.map - - - 404 0 - 19.2252ms
+2021-02-25 12:28:45.389 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js.map - - - 404 0 - 26.2944ms
+2021-02-25 12:28:45.432 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css.map - -
+2021-02-25 12:28:45.433 +03:00 [INF] HTTP GET /swagger/swagger-ui.css.map responded 404 in 0.0209 ms
+2021-02-25 12:28:45.436 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css.map - - - 404 0 - 4.5392ms
+2021-02-25 12:28:54.805 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 81
+2021-02-25 12:28:54.807 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:28:54.808 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:28:54.815 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:28:54.820 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_Name_0='?', @__request_Surname_1='?', @__request_Phone_2='?', @__request_Email_3='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:28:54.826 +03:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Newtonsoft.Json.Linq.JObject, Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed]]'.
+2021-02-25 12:28:54.828 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 17.0224ms
+2021-02-25 12:28:54.830 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:28:54.831 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 24.9011 ms
+2021-02-25 12:28:54.836 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 81 - 400 - application/json;+charset=utf-8 30.7513ms
+2021-02-25 12:32:13.165 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 12:32:13.327 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 12:32:13.329 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 12:32:13.330 +03:00 [INF] Hosting environment: Development
+2021-02-25 12:32:13.331 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 12:32:13.959 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 12:32:14.183 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 221.6619ms
+2021-02-25 12:32:14.611 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 12:32:14.722 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 111.8293ms
+2021-02-25 12:32:15.996 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 81
+2021-02-25 12:32:16.067 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:32:16.134 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:32:18.333 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:32:18.692 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@__request_Name_0='?', @__request_Surname_1='?', @__request_Phone_2='?', @__request_Email_3='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:32:22.407 +03:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Newtonsoft.Json.Linq.JObject, Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed]]'.
+2021-02-25 12:32:22.432 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 6289.0274ms
+2021-02-25 12:32:22.442 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:32:22.446 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 6440.2333 ms
+2021-02-25 12:32:22.455 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 81 - 400 - application/json;+charset=utf-8 6459.9297ms
+2021-02-25 12:32:50.552 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 12:32:50.648 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 12:32:50.650 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 12:32:50.652 +03:00 [INF] Hosting environment: Development
+2021-02-25 12:32:50.653 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 12:32:51.254 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 12:32:51.464 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 207.8816ms
+2021-02-25 12:32:51.835 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 12:32:51.960 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 125.5940ms
+2021-02-25 12:33:02.886 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 81
+2021-02-25 12:33:02.963 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:33:03.028 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:33:05.076 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:33:05.426 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@__request_Name_0='?', @__request_Surname_1='?', @__request_Phone_2='?', @__request_Email_3='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:33:07.024 +03:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-02-25 12:33:07.044 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 4007.8786ms
+2021-02-25 12:33:07.049 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:33:07.053 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 4153.9070 ms
+2021-02-25 12:33:07.062 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 81 - 400 - application/json;+charset=utf-8 4178.8533ms
+2021-02-25 12:36:22.347 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 12:36:22.649 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 12:36:22.653 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 12:36:22.654 +03:00 [INF] Hosting environment: Development
+2021-02-25 12:36:22.655 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 12:36:22.844 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 12:36:23.056 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 208.4263ms
+2021-02-25 12:36:23.384 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 12:36:23.493 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 109.0055ms
+2021-02-25 12:36:25.720 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 81
+2021-02-25 12:36:25.798 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:36:25.871 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:36:30.988 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:36:31.372 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@__request_Name_0='?', @__request_Surname_1='?', @__request_Phone_2='?', @__request_Email_3='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:36:34.479 +03:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType1`3[[System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-02-25 12:36:34.499 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 8619.6795ms
+2021-02-25 12:36:34.505 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:36:34.519 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 8780.7891 ms
+2021-02-25 12:36:34.532 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 81 - 400 - application/json;+charset=utf-8 8815.5053ms
+2021-02-25 12:37:01.321 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 12:37:01.442 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 12:37:01.444 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 12:37:01.445 +03:00 [INF] Hosting environment: Development
+2021-02-25 12:37:01.447 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 12:37:01.792 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 12:37:02.019 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 223.0593ms
+2021-02-25 12:37:02.369 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 12:37:02.484 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 114.8657ms
+2021-02-25 12:37:08.178 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 81
+2021-02-25 12:37:08.255 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:37:08.322 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:37:09.057 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:37:09.423 +03:00 [INF] Executed DbCommand (28ms) [Parameters=[@__request_Name_0='?', @__request_Surname_1='?', @__request_Phone_2='?', @__request_Email_3='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:37:11.203 +03:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType1`3[[System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-02-25 12:37:11.226 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 2895.6088ms
+2021-02-25 12:37:11.231 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:37:11.235 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 3044.6349 ms
+2021-02-25 12:37:11.248 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 81 - 400 - application/json;+charset=utf-8 3070.7209ms
+2021-02-25 12:38:01.271 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 12:38:01.634 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 12:38:01.636 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 12:38:01.638 +03:00 [INF] Hosting environment: Development
+2021-02-25 12:38:01.639 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 12:38:01.802 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 12:38:02.017 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 211.0176ms
+2021-02-25 12:38:02.241 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 12:38:02.361 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 119.8230ms
+2021-02-25 12:38:07.489 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 81
+2021-02-25 12:38:07.561 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:38:07.625 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:38:08.404 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:38:08.748 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@__request_Name_0='?', @__request_Surname_1='?', @__request_Phone_2='?', @__request_Email_3='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:38:10.150 +03:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType1`3[[System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.Collections.Generic.KeyValuePair`2[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-02-25 12:38:10.177 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 2543.9075ms
+2021-02-25 12:38:10.181 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:38:10.184 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 2685.7386 ms
+2021-02-25 12:38:10.193 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 81 - 400 - application/json;+charset=utf-8 2704.5059ms
+2021-02-25 12:41:00.778 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 12:41:00.888 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 12:41:00.890 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 12:41:00.890 +03:00 [INF] Hosting environment: Development
+2021-02-25 12:41:00.891 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 12:41:01.265 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 12:41:01.490 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 219.8630ms
+2021-02-25 12:41:01.891 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 12:41:02.015 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 123.6372ms
+2021-02-25 12:41:04.467 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 81
+2021-02-25 12:41:04.543 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:41:04.629 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:41:05.366 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:41:05.733 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@__request_Name_0='?', @__request_Surname_1='?', @__request_Phone_2='?', @__request_Email_3='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:41:07.225 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "user" ("Email", "Name", "Password", "Phone", "Surname")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "Id"
+FROM "user"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2021-02-25 12:41:07.266 +03:00 [INF] @user Kayıt işlemi Yapıldı
+2021-02-25 12:41:07.283 +03:00 [INF] Executing OkObjectResult, writing value of type 'FigoparaCaseStudyApi.Response.ServiceResponse'.
+2021-02-25 12:41:07.304 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 2667.0566ms
+2021-02-25 12:41:07.308 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:41:07.312 +03:00 [INF] HTTP POST /api/v1/User/add responded 200 in 2836.1007 ms
+2021-02-25 12:41:07.318 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 81 - 200 - application/json;+charset=utf-8 2851.8122ms
+2021-02-25 12:41:40.113 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 81
+2021-02-25 12:41:40.117 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:41:40.120 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:41:40.150 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:41:40.210 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_Name_0='?', @__request_Surname_1='?', @__request_Phone_2='?', @__request_Email_3='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:41:55.346 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "user" ("Email", "Name", "Password", "Phone", "Surname")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "Id"
+FROM "user"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2021-02-25 12:41:55.356 +03:00 [INF] @user Kayıt işlemi Yapıldı
+2021-02-25 12:42:05.904 +03:00 [INF] Executing OkObjectResult, writing value of type 'FigoparaCaseStudyApi.Response.ServiceResponse'.
+2021-02-25 12:42:05.906 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 25783.553ms
+2021-02-25 12:42:05.913 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:42:05.914 +03:00 [INF] HTTP POST /api/v1/User/add responded 200 in 25798.9852 ms
+2021-02-25 12:42:05.916 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 81 - 200 - application/json;+charset=utf-8 25803.3740ms
+2021-02-25 12:42:30.685 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 81
+2021-02-25 12:42:30.688 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:42:30.695 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:42:30.712 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:42:30.717 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Name_0='?', @__request_Surname_1='?', @__request_Phone_2='?', @__request_Email_3='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:42:57.745 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "user" ("Email", "Name", "Password", "Phone", "Surname")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "Id"
+FROM "user"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2021-02-25 12:42:57.760 +03:00 [INF] @user Kayıt işlemi Yapıldı
+2021-02-25 12:42:57.761 +03:00 [INF] Executing OkObjectResult, writing value of type 'FigoparaCaseStudyApi.Response.ServiceResponse'.
+2021-02-25 12:42:57.763 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 27064.5251ms
+2021-02-25 12:42:57.765 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:42:57.767 +03:00 [INF] HTTP POST /api/v1/User/add responded 200 in 27079.3790 ms
+2021-02-25 12:42:57.769 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 81 - 200 - application/json;+charset=utf-8 27084.0483ms
+2021-02-25 12:43:59.785 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 12:43:59.921 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 12:43:59.926 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 12:44:00.110 +03:00 [INF] Hosting environment: Development
+2021-02-25 12:44:00.112 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 12:44:00.344 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 12:44:00.706 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 318.4813ms
+2021-02-25 12:44:02.173 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 12:44:02.311 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 137.8320ms
+2021-02-25 12:44:23.482 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 12:44:23.594 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 12:44:23.596 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 12:44:23.597 +03:00 [INF] Hosting environment: Development
+2021-02-25 12:44:23.598 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 12:44:24.446 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 12:44:24.688 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 231.9041ms
+2021-02-25 12:44:26.719 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 81
+2021-02-25 12:44:26.792 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:44:26.860 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:44:27.637 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:44:27.995 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@__request_Name_0='?', @__request_Surname_1='?', @__request_Phone_2='?', @__request_Email_3='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:44:29.277 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Name_0='?', @__request_Surname_1='?', @__request_Phone_2='?', @__request_Email_3='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:44:30.371 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Name_0='?', @__request_Surname_1='?', @__request_Phone_2='?', @__request_Email_3='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:44:33.266 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "user" ("Email", "Name", "Password", "Phone", "Surname")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "Id"
+FROM "user"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2021-02-25 12:44:33.308 +03:00 [INF] @user Kayıt işlemi Yapıldı
+2021-02-25 12:44:33.325 +03:00 [INF] Executing OkObjectResult, writing value of type 'FigoparaCaseStudyApi.Response.ServiceResponse'.
+2021-02-25 12:44:33.347 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 6480.1672ms
+2021-02-25 12:44:33.351 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:44:33.354 +03:00 [INF] HTTP POST /api/v1/User/add responded 200 in 6627.8474 ms
+2021-02-25 12:44:33.360 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 81 - 200 - application/json;+charset=utf-8 6641.4235ms
+2021-02-25 12:45:22.993 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 12:45:23.102 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 12:45:23.117 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 12:45:23.119 +03:00 [INF] Hosting environment: Development
+2021-02-25 12:45:23.201 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 12:45:23.601 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 12:45:23.853 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 242.8387ms
+2021-02-25 12:45:25.434 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 12:45:25.552 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 118.1431ms
+2021-02-25 12:45:33.407 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117
+2021-02-25 12:45:33.480 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:45:33.549 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:45:34.371 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:45:34.736 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@__request_Name_0='?' (Size = 6), @__request_Surname_1='?' (Size = 6), @__request_Phone_2='?' (Size = 6), @__request_Email_3='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:45:34.771 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Name_0='?' (Size = 6), @__request_Surname_1='?' (Size = 6), @__request_Phone_2='?' (Size = 6), @__request_Email_3='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:45:34.779 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Name_0='?' (Size = 6), @__request_Surname_1='?' (Size = 6), @__request_Phone_2='?' (Size = 6), @__request_Email_3='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:45:36.158 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 6), @p1='?' (Size = 6), @p2='?' (Size = 6), @p3='?' (Size = 6), @p4='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "user" ("Email", "Name", "Password", "Phone", "Surname")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "Id"
+FROM "user"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2021-02-25 12:45:36.210 +03:00 [INF] @user Kayıt işlemi Yapıldı
+2021-02-25 12:45:36.228 +03:00 [INF] Executing OkObjectResult, writing value of type 'FigoparaCaseStudyApi.Response.ServiceResponse'.
+2021-02-25 12:45:36.250 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 2692.2365ms
+2021-02-25 12:45:36.255 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:45:36.258 +03:00 [INF] HTTP POST /api/v1/User/add responded 200 in 2843.9962 ms
+2021-02-25 12:45:36.265 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117 - 200 - application/json;+charset=utf-8 2859.0713ms
+2021-02-25 12:47:16.934 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 12:47:17.073 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 12:47:17.076 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 12:47:17.077 +03:00 [INF] Hosting environment: Development
+2021-02-25 12:47:17.078 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 12:47:17.309 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117
+2021-02-25 12:47:17.435 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 12:47:17.478 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:47:17.567 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:47:17.669 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 205.7317ms
+2021-02-25 12:47:20.539 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 12:47:31.574 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 11035.5204ms
+2021-02-25 12:47:31.887 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:47:32.238 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@__request_Name_0='?' (Size = 6), @__request_Surname_1='?' (Size = 6), @__request_Phone_2='?' (Size = 6), @__request_Email_3='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:47:44.759 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 12:47:44.863 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 12:47:44.868 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 12:47:44.869 +03:00 [INF] Hosting environment: Development
+2021-02-25 12:47:44.870 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 12:47:45.680 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 12:47:46.000 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 319.9643ms
+2021-02-25 12:47:46.043 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 12:47:46.064 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 21.8427ms
+2021-02-25 12:47:46.267 +03:00 [FTL] Unable to start Kestrel.
+System.IO.IOException: Failed to bind to address https://127.0.0.1:5001: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Normal olarak her yuva adresi (iletişim kuralı/ağ adresi/bağlantı noktası) için yalnızca bir kullanıma izin veriliyor.
+ ---> System.Net.Sockets.SocketException (10048): Normal olarak her yuva adresi (iletişim kuralı/ağ adresi/bağlantı noktası) için yalnızca bir kullanıma izin veriliyor.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.<Bind>g__BindSocket|13_0(<>c__DisplayClass13_0& )
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.<Bind>g__BindSocket|13_0(<>c__DisplayClass13_0& )
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass29_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IEnumerable`1 listenOptions, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+2021-02-25 12:47:46.560 +03:00 [FTL] Host terminated unexpectedly
+System.IO.IOException: Failed to bind to address https://127.0.0.1:5001: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Normal olarak her yuva adresi (iletişim kuralı/ağ adresi/bağlantı noktası) için yalnızca bir kullanıma izin veriliyor.
+ ---> System.Net.Sockets.SocketException (10048): Normal olarak her yuva adresi (iletişim kuralı/ağ adresi/bağlantı noktası) için yalnızca bir kullanıma izin veriliyor.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.<Bind>g__BindSocket|13_0(<>c__DisplayClass13_0& )
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.<Bind>g__BindSocket|13_0(<>c__DisplayClass13_0& )
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass29_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IEnumerable`1 listenOptions, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at FigoparaCaseStudyApi.Program.Main(String[] args) in D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi\Program.cs:line 29
+2021-02-25 12:47:47.007 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 12:47:47.201 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 194.4778ms
+2021-02-25 12:47:51.876 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 81
+2021-02-25 12:47:51.949 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:47:52.016 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:47:55.266 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:47:55.640 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@__request_Name_0='?', @__request_Surname_1='?', @__request_Phone_2='?', @__request_Email_3='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:48:43.393 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Name_0='?', @__request_Surname_1='?', @__request_Phone_2='?', @__request_Email_3='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:53:25.783 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 12:53:25.879 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 12:53:25.881 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 12:53:25.882 +03:00 [INF] Hosting environment: Development
+2021-02-25 12:53:25.883 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 12:53:26.503 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 12:53:26.770 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 267.5646ms
+2021-02-25 12:53:27.949 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 12:53:28.062 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 113.2827ms
+2021-02-25 12:53:32.947 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/ - -
+2021-02-25 12:53:33.034 +03:00 [INF] HTTP GET / responded 404 in 79.8833 ms
+2021-02-25 12:53:33.041 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 404 0 - 93.3379ms
+2021-02-25 12:53:41.871 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 12:53:41.874 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 2.7808ms
+2021-02-25 12:53:42.340 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 12:53:42.352 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 12.1283ms
+2021-02-25 12:54:05.106 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 88
+2021-02-25 12:54:05.120 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:54:05.192 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:54:08.019 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:54:08.430 +03:00 [INF] Executed DbCommand (23ms) [Parameters=[@__request_Name_0='?', @__request_Surname_1='?', @__request_Phone_2='?', @__request_Email_3='?' (Size = 7)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:54:45.928 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 12:54:46.047 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 12:54:46.049 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 12:54:46.051 +03:00 [INF] Hosting environment: Development
+2021-02-25 12:54:46.052 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 12:54:46.822 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 12:54:47.048 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 224.4060ms
+2021-02-25 12:54:47.570 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 12:54:47.693 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 123.4313ms
+2021-02-25 12:54:49.824 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 88
+2021-02-25 12:54:49.895 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:54:49.962 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:54:52.813 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:54:53.190 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@__request_Name_0='?', @__request_Surname_1='?', @__request_Phone_2='?', @__request_Email_3='?' (Size = 7)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:54:59.732 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Name_0='?', @__request_Surname_1='?', @__request_Phone_2='?', @__request_Email_3='?' (Size = 7)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:55:00.358 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Name_0='?', @__request_Surname_1='?', @__request_Phone_2='?', @__request_Email_3='?' (Size = 7)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:55:03.430 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 7), @p1='?', @p2='?', @p3='?', @p4='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "user" ("Email", "Name", "Password", "Phone", "Surname")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "Id"
+FROM "user"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2021-02-25 12:55:03.470 +03:00 [INF] @user Kayıt işlemi Yapıldı
+2021-02-25 12:55:03.487 +03:00 [INF] Executing OkObjectResult, writing value of type 'FigoparaCaseStudyApi.Response.ServiceResponse'.
+2021-02-25 12:55:03.507 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 13538.5369ms
+2021-02-25 12:55:03.511 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:55:03.516 +03:00 [INF] HTTP POST /api/v1/User/add responded 200 in 13685.0091 ms
+2021-02-25 12:55:03.524 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 88 - 200 - application/json;+charset=utf-8 13700.8067ms
+2021-02-25 12:55:41.292 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 12:55:41.469 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 12:55:41.481 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 12:55:41.498 +03:00 [INF] Hosting environment: Development
+2021-02-25 12:55:41.501 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 12:55:41.810 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 12:55:42.097 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 252.5830ms
+2021-02-25 12:55:43.380 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 12:55:43.502 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 121.2349ms
+2021-02-25 12:55:48.391 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117
+2021-02-25 12:55:48.460 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:55:48.526 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:55:53.590 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:55:53.919 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 6), @p1='?' (Size = 6), @p2='?' (Size = 6), @p3='?' (Size = 6), @p4='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "user" ("Email", "Name", "Password", "Phone", "Surname")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "Id"
+FROM "user"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2021-02-25 12:55:53.977 +03:00 [INF] @user Kayıt işlemi Yapıldı
+2021-02-25 12:55:53.997 +03:00 [INF] Executing OkObjectResult, writing value of type 'FigoparaCaseStudyApi.Response.ServiceResponse'.
+2021-02-25 12:55:54.020 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 5487.667ms
+2021-02-25 12:55:54.025 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:55:54.028 +03:00 [INF] HTTP POST /api/v1/User/add responded 200 in 5628.9413 ms
+2021-02-25 12:55:54.035 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117 - 200 - application/json;+charset=utf-8 5646.0800ms
+2021-02-25 12:56:55.217 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117
+2021-02-25 12:56:55.221 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:56:55.223 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:56:57.534 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:56:57.540 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 6), @p1='?' (Size = 6), @p2='?' (Size = 6), @p3='?' (Size = 6), @p4='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "user" ("Email", "Name", "Password", "Phone", "Surname")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "Id"
+FROM "user"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2021-02-25 12:56:57.553 +03:00 [INF] @user Kayıt işlemi Yapıldı
+2021-02-25 12:57:06.713 +03:00 [INF] Executing OkObjectResult, writing value of type 'FigoparaCaseStudyApi.Response.ServiceResponse'.
+2021-02-25 12:57:06.715 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 11489.7754ms
+2021-02-25 12:57:06.717 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:57:06.719 +03:00 [INF] HTTP POST /api/v1/User/add responded 200 in 11499.2533 ms
+2021-02-25 12:57:06.722 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117 - 200 - application/json;+charset=utf-8 11504.7869ms
+2021-02-25 12:57:39.870 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117
+2021-02-25 12:57:39.872 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:57:39.874 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:57:41.449 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:57:41.454 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 6), @p1='?' (Size = 6), @p2='?' (Size = 6), @p3='?' (Size = 6), @p4='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "user" ("Email", "Name", "Password", "Phone", "Surname")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "Id"
+FROM "user"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2021-02-25 12:57:41.462 +03:00 [INF] @user Kayıt işlemi Yapıldı
+2021-02-25 12:57:47.862 +03:00 [INF] Executing OkObjectResult, writing value of type 'FigoparaCaseStudyApi.Response.ServiceResponse'.
+2021-02-25 12:57:47.866 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 7987.6585ms
+2021-02-25 12:57:47.871 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:57:47.873 +03:00 [INF] HTTP POST /api/v1/User/add responded 200 in 8001.3380 ms
+2021-02-25 12:57:47.879 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117 - 200 - application/json;+charset=utf-8 8009.6802ms
+2021-02-25 12:58:06.983 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 12:58:07.312 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 12:58:07.316 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 12:58:07.318 +03:00 [INF] Hosting environment: Development
+2021-02-25 12:58:07.330 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 12:58:07.504 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 12:58:07.764 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 253.6739ms
+2021-02-25 12:58:08.945 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 12:58:09.064 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 118.7150ms
+2021-02-25 12:58:21.607 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117
+2021-02-25 12:58:21.681 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:58:21.748 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:58:24.905 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 12:58:25.264 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[@__request_Name_0='?' (Size = 6), @__request_Surname_1='?' (Size = 6), @__request_Phone_2='?' (Size = 6), @__request_Email_3='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 12:58:41.329 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 6), @p1='?' (Size = 6), @p2='?' (Size = 6), @p3='?' (Size = 6), @p4='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "user" ("Email", "Name", "Password", "Phone", "Surname")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "Id"
+FROM "user"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2021-02-25 12:58:41.371 +03:00 [INF] @user Kayıt işlemi Yapıldı
+2021-02-25 12:58:41.389 +03:00 [INF] Executing OkObjectResult, writing value of type 'FigoparaCaseStudyApi.Response.ServiceResponse'.
+2021-02-25 12:58:41.413 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 19657.7277ms
+2021-02-25 12:58:41.417 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:58:41.420 +03:00 [INF] HTTP POST /api/v1/User/add responded 200 in 19804.3256 ms
+2021-02-25 12:58:41.427 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117 - 200 - application/json;+charset=utf-8 19821.2874ms
+2021-02-25 12:59:29.737 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 146
+2021-02-25 12:59:29.755 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:59:29.757 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 12:59:32.697 +03:00 [ERR] Object reference not set to an instance of an object.
+2021-02-25 12:59:32.703 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'FigoparaCaseStudyApi.Response.ServiceResponse'.
+2021-02-25 12:59:32.713 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 2952.9875ms
+2021-02-25 12:59:32.722 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 12:59:32.725 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 2971.4915 ms
+2021-02-25 12:59:32.732 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 146 - 400 - application/json;+charset=utf-8 2995.5539ms
+2021-02-25 13:01:10.348 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 13:01:10.456 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 13:01:10.458 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 13:01:10.460 +03:00 [INF] Hosting environment: Development
+2021-02-25 13:01:10.461 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 13:01:10.898 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 13:01:11.230 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 322.7600ms
+2021-02-25 13:01:12.891 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 13:01:13.010 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 119.4630ms
+2021-02-25 13:01:20.810 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 146
+2021-02-25 13:01:20.882 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:01:20.947 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 13:01:23.023 +03:00 [ERR] Object reference not set to an instance of an object.
+2021-02-25 13:01:23.039 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'FigoparaCaseStudyApi.Response.ServiceResponse'.
+2021-02-25 13:01:23.058 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 2102.8844ms
+2021-02-25 13:01:23.063 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:01:23.066 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 2249.4001 ms
+2021-02-25 13:01:23.070 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 146 - 400 - application/json;+charset=utf-8 2260.5950ms
+2021-02-25 13:01:39.652 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 146
+2021-02-25 13:01:39.686 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:01:39.687 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 13:01:41.972 +03:00 [ERR] Object reference not set to an instance of an object.
+2021-02-25 13:01:41.974 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'FigoparaCaseStudyApi.Response.ServiceResponse'.
+2021-02-25 13:01:41.976 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 2286.1985ms
+2021-02-25 13:01:41.978 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:01:41.979 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 2294.5886 ms
+2021-02-25 13:01:41.982 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 146 - 400 - application/json;+charset=utf-8 2329.8481ms
+2021-02-25 13:01:55.382 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 146
+2021-02-25 13:01:55.386 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:01:55.390 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 13:02:07.074 +03:00 [ERR] Object reference not set to an instance of an object.
+2021-02-25 13:02:07.076 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'FigoparaCaseStudyApi.Response.ServiceResponse'.
+2021-02-25 13:02:07.077 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 11684.4425ms
+2021-02-25 13:02:07.079 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:02:07.081 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 11696.0778 ms
+2021-02-25 13:02:07.084 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 146 - 400 - application/json;+charset=utf-8 11702.2968ms
+2021-02-25 13:02:44.477 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 13:02:44.522 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 13:02:44.524 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 13:02:44.525 +03:00 [INF] Hosting environment: Development
+2021-02-25 13:02:44.526 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 13:02:44.943 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 13:02:45.085 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 144.3684ms
+2021-02-25 13:02:49.810 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 146
+2021-02-25 13:02:49.850 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:02:49.889 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 13:02:50.054 +03:00 [ERR] Object reference not set to an instance of an object.
+2021-02-25 13:02:50.062 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'FigoparaCaseStudyApi.Response.ServiceResponse'.
+2021-02-25 13:02:50.081 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 182.174ms
+2021-02-25 13:02:50.086 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:02:50.089 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 272.2958 ms
+2021-02-25 13:02:50.095 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 146 - 400 - application/json;+charset=utf-8 284.3530ms
+2021-02-25 13:05:23.538 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 127
+2021-02-25 13:05:23.542 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:05:23.544 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 13:05:24.110 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 13:05:24.452 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (Size = 24), @p1='?' (Size = 3), @p2='?' (Size = 6), @p3='?' (Size = 6), @p4='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "user" ("Email", "Name", "Password", "Phone", "Surname")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "Id"
+FROM "user"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2021-02-25 13:05:24.520 +03:00 [INF] @user Kayıt işlemi Yapıldı
+2021-02-25 13:05:24.524 +03:00 [INF] Executing OkObjectResult, writing value of type 'FigoparaCaseStudyApi.Response.ServiceResponse'.
+2021-02-25 13:05:24.528 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 980.9516ms
+2021-02-25 13:05:24.531 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:05:24.532 +03:00 [INF] HTTP POST /api/v1/User/add responded 200 in 991.1479 ms
+2021-02-25 13:05:24.539 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 127 - 200 - application/json;+charset=utf-8 1000.4773ms
+2021-02-25 13:05:29.759 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 127
+2021-02-25 13:05:29.763 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:05:29.765 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 13:05:29.801 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 13:05:29.808 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 24), @p1='?' (Size = 3), @p2='?' (Size = 6), @p3='?' (Size = 6), @p4='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "user" ("Email", "Name", "Password", "Phone", "Surname")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "Id"
+FROM "user"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2021-02-25 13:05:29.817 +03:00 [INF] @user Kayıt işlemi Yapıldı
+2021-02-25 13:05:29.819 +03:00 [INF] Executing OkObjectResult, writing value of type 'FigoparaCaseStudyApi.Response.ServiceResponse'.
+2021-02-25 13:05:29.823 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 55.2908ms
+2021-02-25 13:05:29.825 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:05:29.827 +03:00 [INF] HTTP POST /api/v1/User/add responded 200 in 63.3856 ms
+2021-02-25 13:05:29.829 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 127 - 200 - application/json;+charset=utf-8 69.5140ms
+2021-02-25 13:06:39.951 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 13:06:40.232 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 13:06:40.247 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 13:06:40.248 +03:00 [INF] Hosting environment: Development
+2021-02-25 13:06:40.249 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 13:06:40.533 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 13:06:40.782 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 238.9021ms
+2021-02-25 13:06:42.191 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 13:06:42.322 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 131.2079ms
+2021-02-25 13:06:43.671 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 146
+2021-02-25 13:06:43.741 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:06:43.809 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 13:06:46.493 +03:00 [ERR] Object reference not set to an instance of an object.
+2021-02-25 13:06:46.510 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'FigoparaCaseStudyApi.Response.ServiceResponse'.
+2021-02-25 13:06:46.526 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 2709.6177ms
+2021-02-25 13:06:46.531 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:06:46.534 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 2855.5993 ms
+2021-02-25 13:06:46.538 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 146 - 400 - application/json;+charset=utf-8 2867.3311ms
+2021-02-25 13:07:06.543 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 127
+2021-02-25 13:07:06.546 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:07:06.548 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 13:07:26.502 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 13:07:26.832 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (Size = 24), @p1='?' (Size = 3), @p2='?' (Size = 6), @p3='?' (Size = 6), @p4='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "user" ("Email", "Name", "Password", "Phone", "Surname")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "Id"
+FROM "user"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2021-02-25 13:07:26.887 +03:00 [INF] @user Kayıt işlemi Yapıldı
+2021-02-25 13:07:26.890 +03:00 [INF] Executing OkObjectResult, writing value of type 'FigoparaCaseStudyApi.Response.ServiceResponse'.
+2021-02-25 13:07:26.893 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 20342.1559ms
+2021-02-25 13:07:26.895 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:07:26.897 +03:00 [INF] HTTP POST /api/v1/User/add responded 200 in 20353.2890 ms
+2021-02-25 13:07:26.905 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 127 - 200 - application/json;+charset=utf-8 20363.3701ms
+2021-02-25 13:07:35.207 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 13:07:35.209 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 2.3638ms
+2021-02-25 13:07:35.274 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2021-02-25 13:07:35.274 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - -
+2021-02-25 13:07:35.275 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - -
+2021-02-25 13:07:35.342 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-02-25 13:07:35.345 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-02-25 13:07:35.357 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - - - 200 332952 application/javascript 82.6701ms
+2021-02-25 13:07:35.357 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 200 143212 text/css 83.6480ms
+2021-02-25 13:07:35.370 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-02-25 13:07:35.375 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - - - 200 1061588 application/javascript 100.1914ms
+2021-02-25 13:07:36.945 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 13:07:36.956 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/favicon-32x32.png - -
+2021-02-25 13:07:36.958 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2021-02-25 13:07:36.962 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/favicon-32x32.png - - - 200 628 image/png 5.6907ms
+2021-02-25 13:07:36.967 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 22.6970ms
+2021-02-25 13:07:54.274 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 105
+2021-02-25 13:07:54.277 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:07:54.279 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 13:07:58.275 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 13:07:58.283 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 3), @p3='?' (Size = 6), @p4='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "user" ("Email", "Name", "Password", "Phone", "Surname")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "Id"
+FROM "user"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2021-02-25 13:07:58.301 +03:00 [INF] @user Kayıt işlemi Yapıldı
+2021-02-25 13:07:58.302 +03:00 [INF] Executing OkObjectResult, writing value of type 'FigoparaCaseStudyApi.Response.ServiceResponse'.
+2021-02-25 13:07:58.303 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 4019.1838ms
+2021-02-25 13:07:58.306 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:07:58.307 +03:00 [INF] HTTP POST /api/v1/User/add responded 200 in 4030.5537 ms
+2021-02-25 13:07:58.309 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 105 - 200 - application/json;+charset=utf-8 4035.5492ms
+2021-02-25 13:09:18.904 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 13:09:19.021 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 13:09:19.023 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 13:09:19.024 +03:00 [INF] Hosting environment: Development
+2021-02-25 13:09:19.025 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 13:09:19.828 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 13:09:20.089 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 255.9966ms
+2021-02-25 13:09:21.645 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 13:09:21.770 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 125.0561ms
+2021-02-25 13:09:27.691 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:5001/api/v1/User/update application/json 117
+2021-02-25 13:09:27.766 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserUpdate (FigoparaCaseStudyApi)'
+2021-02-25 13:09:27.835 +03:00 [INF] Route matched with {action = "UserUpdate", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserUpdate(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 13:09:31.497 +03:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2021-02-25 13:09:31.504 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserUpdate (FigoparaCaseStudyApi) in 3661.8462ms
+2021-02-25 13:09:31.508 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserUpdate (FigoparaCaseStudyApi)'
+2021-02-25 13:09:31.512 +03:00 [INF] HTTP PUT /api/v1/User/update responded 200 in 3812.8042 ms
+2021-02-25 13:09:31.516 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:5001/api/v1/User/update application/json 117 - 200 0 - 3826.5542ms
+2021-02-25 13:09:36.203 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:5001/api/v1/User/update application/json 117
+2021-02-25 13:09:36.205 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserUpdate (FigoparaCaseStudyApi)'
+2021-02-25 13:09:36.207 +03:00 [INF] Route matched with {action = "UserUpdate", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserUpdate(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 13:09:37.412 +03:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2021-02-25 13:09:37.417 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserUpdate (FigoparaCaseStudyApi) in 1206.5491ms
+2021-02-25 13:09:37.419 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserUpdate (FigoparaCaseStudyApi)'
+2021-02-25 13:09:37.421 +03:00 [INF] HTTP PUT /api/v1/User/update responded 200 in 1216.9198 ms
+2021-02-25 13:09:37.423 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:5001/api/v1/User/update application/json 117 - 200 0 - 1220.5143ms
+2021-02-25 13:09:51.523 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117
+2021-02-25 13:09:51.527 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:09:51.531 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 13:09:54.480 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 13:09:54.828 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 6), @p1='?' (Size = 6), @p2='?' (Size = 6), @p3='?' (Size = 6), @p4='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "user" ("Email", "Name", "Password", "Phone", "Surname")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "Id"
+FROM "user"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2021-02-25 13:09:54.891 +03:00 [INF] @user Kayıt işlemi Yapıldı
+2021-02-25 13:09:54.908 +03:00 [INF] Executing OkObjectResult, writing value of type 'FigoparaCaseStudyApi.Response.ServiceResponse'.
+2021-02-25 13:09:54.926 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 3391.2929ms
+2021-02-25 13:09:54.928 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:09:54.929 +03:00 [INF] HTTP POST /api/v1/User/add responded 200 in 3403.0023 ms
+2021-02-25 13:09:54.936 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117 - 200 - application/json;+charset=utf-8 3412.9106ms
+2021-02-25 13:10:25.612 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 13:10:25.769 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 13:10:25.772 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 13:10:25.773 +03:00 [INF] Hosting environment: Development
+2021-02-25 13:10:25.774 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 13:10:26.243 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 13:10:26.458 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 210.2394ms
+2021-02-25 13:10:26.918 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 13:10:27.036 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 118.3824ms
+2021-02-25 13:10:33.074 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117
+2021-02-25 13:10:33.146 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:10:33.215 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 13:10:37.614 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 13:10:37.936 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 6), @p1='?' (Size = 6), @p2='?' (Size = 6), @p3='?' (Size = 6), @p4='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "user" ("Email", "Name", "Password", "Phone", "Surname")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "Id"
+FROM "user"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2021-02-25 13:10:37.998 +03:00 [INF] @user Kayıt işlemi Yapıldı
+2021-02-25 13:10:38.017 +03:00 [INF] Executing OkObjectResult, writing value of type 'FigoparaCaseStudyApi.Response.ServiceResponse'.
+2021-02-25 13:10:38.040 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 4817.3761ms
+2021-02-25 13:10:38.044 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:10:38.047 +03:00 [INF] HTTP POST /api/v1/User/add responded 200 in 4967.0321 ms
+2021-02-25 13:10:38.053 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117 - 200 - application/json;+charset=utf-8 4979.4278ms
+2021-02-25 13:13:38.601 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 13:13:38.890 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 13:13:38.892 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 13:13:38.893 +03:00 [INF] Hosting environment: Development
+2021-02-25 13:13:38.894 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 13:13:39.163 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 13:13:39.392 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 225.4961ms
+2021-02-25 13:13:40.959 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 13:13:41.076 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 117.2178ms
+2021-02-25 13:13:45.170 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:5001/api/v1/User/update application/json 124
+2021-02-25 13:13:45.239 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserUpdate (FigoparaCaseStudyApi)'
+2021-02-25 13:13:45.304 +03:00 [INF] Route matched with {action = "UserUpdate", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserUpdate(FigoparaCaseStudyApi.Request.UserUpdateRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 13:13:49.570 +03:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2021-02-25 13:13:49.577 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserUpdate (FigoparaCaseStudyApi) in 4265.6195ms
+2021-02-25 13:13:49.582 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserUpdate (FigoparaCaseStudyApi)'
+2021-02-25 13:13:49.585 +03:00 [INF] HTTP PUT /api/v1/User/update responded 200 in 4407.6384 ms
+2021-02-25 13:13:49.591 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:5001/api/v1/User/update application/json 124 - 200 0 - 4421.8699ms
+2021-02-25 13:14:04.831 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:5001/api/v1/User/update application/json 128
+2021-02-25 13:14:04.843 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserUpdate (FigoparaCaseStudyApi)'
+2021-02-25 13:14:04.845 +03:00 [INF] Route matched with {action = "UserUpdate", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserUpdate(FigoparaCaseStudyApi.Request.UserUpdateRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 13:14:04.858 +03:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2021-02-25 13:14:04.860 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserUpdate (FigoparaCaseStudyApi) in 10.3669ms
+2021-02-25 13:14:04.862 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserUpdate (FigoparaCaseStudyApi)'
+2021-02-25 13:14:04.864 +03:00 [INF] HTTP PUT /api/v1/User/update responded 200 in 21.3772 ms
+2021-02-25 13:14:04.867 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:5001/api/v1/User/update application/json 128 - 200 0 - 35.9714ms
+2021-02-25 13:14:06.391 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:5001/api/v1/User/update application/json 128
+2021-02-25 13:14:06.394 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserUpdate (FigoparaCaseStudyApi)'
+2021-02-25 13:14:06.395 +03:00 [INF] Route matched with {action = "UserUpdate", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserUpdate(FigoparaCaseStudyApi.Request.UserUpdateRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 13:14:06.401 +03:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2021-02-25 13:14:06.402 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserUpdate (FigoparaCaseStudyApi) in 2.5ms
+2021-02-25 13:14:06.403 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserUpdate (FigoparaCaseStudyApi)'
+2021-02-25 13:14:06.404 +03:00 [INF] HTTP PUT /api/v1/User/update responded 200 in 10.7089 ms
+2021-02-25 13:14:06.408 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:5001/api/v1/User/update application/json 128 - 200 0 - 17.3168ms
+2021-02-25 13:14:07.284 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:5001/api/v1/User/update application/json 128
+2021-02-25 13:14:07.286 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserUpdate (FigoparaCaseStudyApi)'
+2021-02-25 13:14:07.288 +03:00 [INF] Route matched with {action = "UserUpdate", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserUpdate(FigoparaCaseStudyApi.Request.UserUpdateRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 13:14:07.291 +03:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2021-02-25 13:14:07.292 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserUpdate (FigoparaCaseStudyApi) in 1.9249ms
+2021-02-25 13:14:07.293 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserUpdate (FigoparaCaseStudyApi)'
+2021-02-25 13:14:07.295 +03:00 [INF] HTTP PUT /api/v1/User/update responded 200 in 8.8453 ms
+2021-02-25 13:14:07.298 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:5001/api/v1/User/update application/json 128 - 200 0 - 14.0783ms
+2021-02-25 13:14:50.243 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:5001/api/v1/User/update application/json 79
+2021-02-25 13:14:50.255 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserUpdate (FigoparaCaseStudyApi)'
+2021-02-25 13:14:50.256 +03:00 [INF] Route matched with {action = "UserUpdate", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserUpdate(FigoparaCaseStudyApi.Request.UserUpdateRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 13:14:57.349 +03:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2021-02-25 13:14:57.351 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserUpdate (FigoparaCaseStudyApi) in 7093.4963ms
+2021-02-25 13:14:57.353 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserUpdate (FigoparaCaseStudyApi)'
+2021-02-25 13:14:57.354 +03:00 [INF] HTTP PUT /api/v1/User/update responded 200 in 7099.6078 ms
+2021-02-25 13:14:57.357 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:5001/api/v1/User/update application/json 79 - 200 0 - 7115.2640ms
+2021-02-25 13:18:19.139 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 13:18:19.240 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 13:18:19.242 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 13:18:19.243 +03:00 [INF] Hosting environment: Development
+2021-02-25 13:18:19.244 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 13:18:19.661 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 13:18:19.929 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 262.8506ms
+2021-02-25 13:18:21.660 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 13:18:21.781 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 121.5164ms
+2021-02-25 13:18:33.611 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:5001/api/v1/User/update application/json 111
+2021-02-25 13:18:33.681 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserUpdate (FigoparaCaseStudyApi)'
+2021-02-25 13:18:33.750 +03:00 [INF] Route matched with {action = "UserUpdate", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserUpdate(FigoparaCaseStudyApi.Request.UserUpdateRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 13:18:35.321 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-02-25 13:18:35.345 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserUpdate (FigoparaCaseStudyApi) in 1587.7373ms
+2021-02-25 13:18:35.351 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserUpdate (FigoparaCaseStudyApi)'
+2021-02-25 13:18:35.355 +03:00 [INF] HTTP PUT /api/v1/User/update responded 400 in 1736.3972 ms
+2021-02-25 13:18:35.359 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:5001/api/v1/User/update application/json 111 - 400 - application/json;+charset=utf-8 1748.6260ms
+2021-02-25 13:19:43.536 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 13:19:43.644 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 13:19:43.646 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 13:19:43.648 +03:00 [INF] Hosting environment: Development
+2021-02-25 13:19:43.649 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 13:19:44.149 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 13:19:44.389 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 226.1828ms
+2021-02-25 13:19:45.943 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 13:19:46.084 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 141.1095ms
+2021-02-25 13:19:50.609 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117
+2021-02-25 13:19:50.685 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:19:50.755 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 13:19:52.432 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-02-25 13:19:52.456 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 1692.8288ms
+2021-02-25 13:19:52.461 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:19:52.466 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 1847.4310 ms
+2021-02-25 13:19:52.470 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117 - 400 - application/json;+charset=utf-8 1861.2193ms
+2021-02-25 13:20:39.848 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 13:20:39.955 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 13:20:39.958 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 13:20:39.958 +03:00 [INF] Hosting environment: Development
+2021-02-25 13:20:39.959 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 13:20:40.432 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 13:20:40.703 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 262.2661ms
+2021-02-25 13:20:42.284 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 13:20:42.401 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 116.9359ms
+2021-02-25 13:20:46.990 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 99
+2021-02-25 13:20:47.066 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:20:47.134 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 13:20:53.690 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 13:20:54.082 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[@__request_Name_0='?', @__request_Surname_1='?', @__request_Phone_2='?' (Size = 6), @__request_Email_3='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 13:20:59.460 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-02-25 13:20:59.490 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 12349.1902ms
+2021-02-25 13:20:59.496 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:20:59.499 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 12500.3544 ms
+2021-02-25 13:20:59.508 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 99 - 400 - application/json;+charset=utf-8 12518.6590ms
+2021-02-25 13:21:44.075 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 13:21:44.339 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 13:21:44.341 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 13:21:44.345 +03:00 [INF] Hosting environment: Development
+2021-02-25 13:21:44.346 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 13:21:44.627 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 13:21:44.897 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 259.3335ms
+2021-02-25 13:21:46.298 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 13:21:46.425 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 126.4825ms
+2021-02-25 13:21:53.003 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117
+2021-02-25 13:21:53.074 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:21:53.146 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 13:21:56.416 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 13:21:56.785 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@__request_Name_0='?' (Size = 6), @__request_Surname_1='?' (Size = 6), @__request_Phone_2='?' (Size = 6), @__request_Email_3='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 13:22:03.256 +03:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType1`3[[System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-02-25 13:22:03.279 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 10125.6515ms
+2021-02-25 13:22:03.283 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:22:03.286 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 10275.0664 ms
+2021-02-25 13:22:03.294 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 117 - 400 - application/json;+charset=utf-8 10291.7537ms
+2021-02-25 13:23:08.433 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 13:23:08.537 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 13:23:08.539 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 13:23:08.540 +03:00 [INF] Hosting environment: Development
+2021-02-25 13:23:08.541 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 13:23:09.152 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 13:23:09.414 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 256.6602ms
+2021-02-25 13:23:10.740 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 13:23:10.850 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 110.1580ms
+2021-02-25 13:23:11.337 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 99
+2021-02-25 13:23:11.412 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:23:11.483 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 13:23:14.943 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 13:23:15.337 +03:00 [INF] Executed DbCommand (38ms) [Parameters=[@__request_Name_0='?', @__request_Surname_1='?', @__request_Phone_2='?' (Size = 6), @__request_Email_3='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 13:23:18.128 +03:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType1`3[[System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-02-25 13:23:18.152 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 6660.8521ms
+2021-02-25 13:23:18.156 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:23:18.159 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 6812.8972 ms
+2021-02-25 13:23:18.167 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 99 - 400 - application/json;+charset=utf-8 6829.5612ms
+2021-02-25 13:23:48.645 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 99
+2021-02-25 13:23:48.651 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:23:48.654 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 13:24:16.664 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 13:24:16.670 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Name_0='?', @__request_Surname_1='?', @__request_Phone_2='?' (Size = 6), @__request_Email_3='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 13:24:26.821 +03:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType1`3[[System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-02-25 13:24:26.824 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 38167.3596ms
+2021-02-25 13:24:26.827 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:24:26.828 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 38178.8754 ms
+2021-02-25 13:24:26.831 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 99 - 400 - application/json;+charset=utf-8 38186.8418ms
+2021-02-25 13:25:35.243 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 13:25:35.346 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 13:25:35.348 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 13:25:35.349 +03:00 [INF] Hosting environment: Development
+2021-02-25 13:25:35.350 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 13:25:35.834 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 13:25:36.104 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 261.6213ms
+2021-02-25 13:25:37.812 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 13:25:37.928 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 115.4536ms
+2021-02-25 13:25:43.125 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 99
+2021-02-25 13:25:43.198 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:25:43.264 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 13:25:45.958 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 13:25:46.347 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@__request_Name_0='?', @__request_Surname_1='?', @__request_Phone_2='?' (Size = 6), @__request_Email_3='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 13:25:48.629 +03:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType1`3[[System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-02-25 13:25:48.654 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 5381.6337ms
+2021-02-25 13:25:48.658 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:25:48.662 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 5529.2420 ms
+2021-02-25 13:25:48.669 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 99 - 400 - application/json;+charset=utf-8 5546.2228ms
+2021-02-25 13:27:18.917 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 13:27:19.035 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 13:27:19.037 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 13:27:19.038 +03:00 [INF] Hosting environment: Development
+2021-02-25 13:27:19.039 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 13:27:19.461 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 13:27:19.714 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 243.9467ms
+2021-02-25 13:27:21.340 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 13:27:21.457 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 117.0809ms
+2021-02-25 13:27:25.006 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 99
+2021-02-25 13:27:25.082 +03:00 [INF] Executing endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:27:25.150 +03:00 [INF] Route matched with {action = "UserAdd", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserAdd(FigoparaCaseStudyApi.Request.UserAddRequest) on controller FigoparaCaseStudyApi.Controllers.UserController (FigoparaCaseStudyApi).
+2021-02-25 13:27:27.976 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'UserDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-02-25 13:27:28.356 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@__request_Name_0='?', @__request_Surname_1='?', @__request_Phone_2='?' (Size = 6), @__request_Email_3='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "user" AS "u"
+    WHERE ((("u"."Name" = @__request_Name_0) OR ("u"."Surname" = @__request_Surname_1)) OR ("u"."Phone" = @__request_Phone_2)) OR ("u"."Email" = @__request_Email_3))
+2021-02-25 13:27:29.795 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-02-25 13:27:29.821 +03:00 [INF] Executed action FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi) in 4662.7034ms
+2021-02-25 13:27:29.824 +03:00 [INF] Executed endpoint 'FigoparaCaseStudyApi.Controllers.UserController.UserAdd (FigoparaCaseStudyApi)'
+2021-02-25 13:27:29.828 +03:00 [INF] HTTP POST /api/v1/User/add responded 400 in 4811.6301 ms
+2021-02-25 13:27:29.835 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/User/add application/json 99 - 400 - application/json;+charset=utf-8 4830.8376ms
+2021-02-25 15:10:41.056 +03:00 [INF] Now listening on: https://localhost:5001
+2021-02-25 15:10:41.544 +03:00 [INF] Now listening on: http://localhost:5000
+2021-02-25 15:10:41.549 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-25 15:10:41.550 +03:00 [INF] Hosting environment: Development
+2021-02-25 15:10:41.552 +03:00 [INF] Content root path: D:\Projects\FigoparaCaseStudy\FigoparaCaseStudyApi
+2021-02-25 15:10:41.719 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-02-25 15:10:41.986 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 257.9057ms
+2021-02-25 15:10:43.659 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-02-25 15:10:43.793 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 133.8909ms

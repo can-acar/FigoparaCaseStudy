@@ -1,4 +1,5 @@
-﻿using System.Net.Mime;
+﻿using System;
+using System.Net.Mime;
 using System.Threading.Tasks;
 using FigoparaCaseStudyApi.Request;
 using FigoparaCaseStudyApi.Response;
@@ -30,14 +31,30 @@ namespace FigoparaCaseStudyApi.Controllers
         [ProducesResponseType(typeof(ServiceResponse), StatusCodes.Status200OK)]
         public async Task<IActionResult> UserAdd([FromBody] UserAddRequest request)
         {
-            return Ok();
+            try
+            {
+                var result = await UserService.Add(request);
+
+                if (result.Status)
+                {
+                    return Ok(result);
+                }
+
+                return BadRequest(result);
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex, ex.Message);
+                
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpPut("update")]
         [ProducesResponseType(typeof(ServiceResponse), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(ServiceResponse), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(ServiceResponse), StatusCodes.Status200OK)]
-        public async Task<IActionResult> UserUpdate([FromBody] UserAddRequest request)
+        public async Task<IActionResult> UserUpdate([FromBody] UserUpdateRequest request)
         {
             return Ok();
         }

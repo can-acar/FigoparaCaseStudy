@@ -7,26 +7,36 @@ namespace FigoparaCaseStudyApi.Validations
     {
         public UserAddValidation()
         {
-            RuleFor(f => f.Email)
-                .NotEmpty()
-                .EmailAddress()
-                .WithMessage("Hatalı mail adres");
-
-            RuleFor(f => f.Phone)
-                .NotEmpty();
-
-            RuleFor(f => f.Name)
-                .NotEmpty();
+           RuleFor(f => f.Name)
+             .NotEmpty()
+             .NotNull();
+            
 
             RuleFor(f => f.Surname)
-                .NotEmpty();
+               .NotEmpty()
+               .NotNull();
 
             RuleFor(f => f.Password)
-                .NotEmpty();
-         
+               .NotEmpty()
+               .NotNull();
+
             RuleFor(f => f.ConfirmPassword)
-                .Equal(f => f.Password)
-                .WithMessage("Hatalı şifre");
+               .Equal(f => f.Password)
+               .WithMessage("Hatalı şifre");
+
+            RuleFor(f => f.Email)
+               .NotEmpty()
+               .NotNull()
+               .EmailAddress()
+               .WithMessage("Hatalı mail adres");
+           
+
+            RuleFor(f => f.Phone)
+               .NotEmpty()
+               .NotNull();
+           
         }
+
+       
     }
 }

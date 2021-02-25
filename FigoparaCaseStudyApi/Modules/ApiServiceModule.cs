@@ -1,5 +1,8 @@
 ﻿using System.Reflection;
 using Autofac;
+using FigoparaCaseStudyApi.Request;
+using FigoparaCaseStudyApi.Validations;
+using FluentValidation;
 using Microsoft.Extensions.Logging;
 using Module = Autofac.Module;
 
@@ -23,6 +26,9 @@ namespace FigoparaCaseStudyApi.Modules
                    .Where(what => what.Name.EndsWith("Repository"))
                    .AsImplementedInterfaces()
                    .InstancePerLifetimeScope();
+
+
+            builder.RegisterType<UserAddValidation>().As<IValidator<UserAddRequest>>();
         }
     }
 }
