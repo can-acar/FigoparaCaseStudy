@@ -56,7 +56,23 @@ namespace FigoparaCaseStudyApi.Controllers
         [ProducesResponseType(typeof(ServiceResponse), StatusCodes.Status200OK)]
         public async Task<IActionResult> UserUpdate([FromBody] UserUpdateRequest request)
         {
-            return Ok();
+            try
+            {
+                var result = await UserService.Update(request);
+
+                if (result.Status)
+                {
+                    return Ok(result);
+                }
+
+                return BadRequest(result);
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex, ex.Message);
+                
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpDelete("delete")]
@@ -65,17 +81,48 @@ namespace FigoparaCaseStudyApi.Controllers
         [ProducesResponseType(typeof(ServiceResponse), StatusCodes.Status200OK)]
         public async Task<IActionResult> UserDelete([FromBody] UserDeleteRequest request)
         {
-            return Ok();
+            try
+            {
+                var result = await UserService.Delete(request);
+
+                if (result.Status)
+                {
+                    return Ok(result);
+                }
+
+                return BadRequest(result);
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex, ex.Message);
+                
+                return BadRequest(ex.Message);
+            }
         }
 
-        [HttpGet("get")]
-        [ProducesResponseType(typeof(ServiceResponse), StatusCodes.Status204NoContent)]
+        [HttpGet("get/{Id}")]
         [ProducesResponseType(typeof(ServiceResponse), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(ServiceResponse), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(ServiceResponse), StatusCodes.Status200OK)]
-        public async Task<IActionResult> UseGet([FromBody] UserGetRequest request)
+        public async Task<IActionResult> UseGet([FromRoute] UserGetRequest request)
         {
-            return Ok();
+            try
+            {
+                var result = await UserService.Get(request);
+
+                if (result.Status)
+                {
+                    return Ok(result);
+                }
+
+                return BadRequest(result);
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex, ex.Message);
+                
+                return BadRequest(ex.Message);
+            }
         }
 
         //Güvenlik gereği n parametleri sorgularda injection denemelerinden izin vermemek   için post metodu
@@ -85,7 +132,23 @@ namespace FigoparaCaseStudyApi.Controllers
         [ProducesResponseType(typeof(ServiceResponse), StatusCodes.Status200OK)]
         public async Task<IActionResult> UseSearch([FromBody] UserSearchRequest request)
         {
-            return Ok();
+            try
+            {
+                var result = await UserService.Searh(request);
+
+                if (result.Status)
+                {
+                    return Ok(result);
+                }
+
+                return BadRequest(result);
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex, ex.Message);
+                
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

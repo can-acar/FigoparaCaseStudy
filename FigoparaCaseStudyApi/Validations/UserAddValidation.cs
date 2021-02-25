@@ -34,9 +34,7 @@ namespace FigoparaCaseStudyApi.Validations
             RuleFor(f => f.Phone)
                .NotEmpty()
                .NotNull();
-           
         }
 
-       
     }
 }
